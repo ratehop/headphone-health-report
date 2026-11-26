@@ -1,0 +1,14 @@
+{
+  "name": "耳机佩戴报告",
+  "short_name": "佩戴报告",
+  "description": "把 Apple Health 的耳机音频暴露数据变成一份本地生成的佩戴报告。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0b0f",
+  "theme_color": "#0b0b0f",
+  "icons": [
+    { "src": "./icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" }
+  ]
+}
