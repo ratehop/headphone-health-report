@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-color="azure">
+<html lang="zh-CN" data-color="tangerine">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#eef3fb">
+<meta name="theme-color" content="#3a1c07">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="佩戴报告">
+<meta name="mobile-web-app-capable" content="yes">
 <title>耳机佩戴报告</title>
 <link rel="icon" href="./assets/icon.png">
-<link rel="apple-touch-icon" href="./assets/icon.png">
-<link rel="manifest" href="./assets/manifest.webmanifest">
-<link rel="stylesheet" href="./style.css">
+<link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./style.css?v=4.6.0">
 </head>
 <body>
 <div id="frame">
@@ -20,7 +23,7 @@
  <div class="wrap">
   <div class="topnote">
    <span class="tn-l"><a href="https://github.com/ratehop/headphone-health-report" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a><i class="tn-sep"></i><span class="os">开源工具</span></span>
-   <span class="tn-r"><span class="ver" title="构建 2026-11-26">v4.0.0</span><button class="tn-theme" data-theme-toggle title="切换深浅色" aria-label="切换深浅色"><svg class="ico-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7z"/></svg><svg class="ico-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></span>
+   <span class="tn-r"><span class="ver" title="构建 2026-11-26">v4.6.0</span></span>
   </div>
   <h1>耳机佩戴报告</h1>
   <h2>从 Apple Health 导出数据，本地生成统计</h2>
@@ -49,7 +52,7 @@
  <div class="wrap">
   <div class="topnote">
    <span class="tn-l"><a href="https://github.com/ratehop/headphone-health-report" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a></span>
-   <span class="tn-r"><span class="ver">v4.0.0</span></span>
+   <span class="tn-r"><span class="ver">v4.6.0</span></span>
   </div>
   <h1>正在分析</h1><h2>全过程在本地完成</h2>
   <div class="card statuscard"><div class="spin"></div><div id="status">正在读取压缩包…</div><div class="pbar"><i></i></div><div class="centerhint">健康数据通常较大，请稍候</div></div>
@@ -70,8 +73,7 @@
    <div class="left"><button class="iconbtn" id="closeBtn" title="重新导入" aria-label="重新导入"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
    <div class="title">耳机佩戴报告</div>
    <div class="right">
-    <button class="iconbtn" data-theme-toggle title="切换深浅色" aria-label="切换深浅色"><svg class="ico-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7z"/></svg><svg class="ico-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-    <button class="iconbtn" id="infoBtn" title="数据说明" aria-label="数据说明"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    <button class="iconbtn" id="settingsBtn" title="设置" aria-label="设置"><svg viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.08a1.7 1.7 0 0 0-1.11-1.56 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.52-1H3a2 2 0 1 1 0-4h.08A1.7 1.7 0 0 0 4.6 8.9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.52V3a2 2 0 1 1 4 0v.08a1.7 1.7 0 0 0 1 1.52 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.52 1H21a2 2 0 1 1 0 4h-.08a1.7 1.7 0 0 0-1.52 1z"/></svg></button>
    </div>
  </div></div>
 
@@ -81,12 +83,15 @@
    <!-- PAGE 1 · 今天/概览 -->
    <section class="hp-page" id="page0">
     <div class="phead"><div class="ptitle">概览</div><div class="psub" id="ovRange">—</div></div>
+    <div class="chips" id="ovChips" role="tablist" aria-label="选择设备"></div>
     <div class="hero card">
-     <div class="hlab">累计聆听时长</div>
-     <div class="big" id="ovTotal">—</div>
-     <img class="eq" id="ovImg" src="" alt="">
-     <div class="pct" id="ovPct">—</div>
-     <div class="period" id="ovPeriod">—</div>
+     <div class="hero-txt">
+      <div class="hlab">累计聆听时长</div>
+      <div class="big" id="ovTotal">—</div>
+      <div class="pct" id="ovPct">—</div>
+      <div class="period" id="ovPeriod">—</div>
+     </div>
+     <div class="deco" id="ovArt" aria-hidden="true"></div>
     </div>
     <div class="grid2">
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>累计佩戴次数</div><div class="v" id="ovCount">—</div><div class="ft">次</div></div>
@@ -95,13 +100,15 @@
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></span>平均音量</div><div class="v" id="ovDb">—</div><div class="ft">dB(A) · 能量加权</div></div>
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></span>第一次佩戴</div><div class="v sm" id="ovFirst">—</div><div class="ft" id="ovFirstFt">—</div></div>
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></span>最后一次佩戴</div><div class="v sm" id="ovLast">—</div><div class="ft" id="ovLastFt">—</div></div>
+     <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/></svg></span>日均佩戴</div><div class="v sm" id="ovDaily">—</div><div class="ft" id="ovDailyFt">—</div></div>
+     <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></span>有记录日均</div><div class="v sm" id="ovRecDay">—</div><div class="ft" id="ovRecDayFt">—</div></div>
     </div>
     <div class="foot">数据来自本机健康导出 · 全程本地解析</div>
    </section>
 
    <!-- PAGE 2 · 统计 -->
    <section class="hp-page" id="page1">
-    <div class="phead"><div class="ptitle">统计</div><div class="psub">个人纪录 · 已读取全部历史</div></div>
+    <div class="phead"><div class="ptitle">统计</div><div class="psub" id="stScope">个人纪录 · 已读取全部历史</div></div>
     <div class="grid2">
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></span>单日佩戴最长</div><div class="v" id="stDay">—</div><div class="ft" id="stDayFt">—</div></div>
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>单次佩戴最长 <span class="tag">估算</span></div><div class="v" id="stSess">—</div><div class="ft" id="stSessFt">—</div></div>
@@ -109,7 +116,7 @@
      <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></span>单月佩戴最长</div><div class="v" id="stMonth">—</div><div class="ft" id="stMonthFt">—</div></div>
     </div>
     <div class="sectitle">最常戴耳机</div>
-    <div class="topcard card"><img id="stTopImg" src="" alt=""><div class="info"><div class="nm" id="stTopName">—</div><div class="mid" id="stTopTime">—</div><div class="ft">已读取历史累计佩戴</div></div></div>
+    <div class="topcard card"><div class="deco" id="stTopArt" aria-hidden="true"></div><div class="info"><div class="nm" id="stTopName">—</div><div class="mid" id="stTopTime">—</div><div class="ft">已读取历史累计佩戴</div></div></div>
     <div class="sectitle">佩戴趋势</div>
     <div class="seg" id="seg" role="tablist" aria-label="时间周期">
       <button data-p="week" class="on" role="tab" aria-selected="true">周</button><button data-p="month" role="tab" aria-selected="false">月</button><button data-p="year" role="tab" aria-selected="false">年</button><button data-p="total" role="tab" aria-selected="false">总共</button>
@@ -119,11 +126,67 @@
      <div class="bars" id="chartBars" role="img" aria-label="佩戴时长柱状图"></div>
      <div class="chartfoot"><span id="chartMax">—</span><span id="chartSum">—</span></div>
     </div>
-    <div class="note card" id="noteBox">佩戴次数、最长一次按 5 分钟间隔估算；所有时长按重叠区间去重；平均音量按声能量加权。首次/末次为有耳机音量记录的时间，非物理入耳检测。</div>
+    <div class="note card" id="noteBox">佩戴次数、最长一次按 5 分钟间隔估算；所有时长按重叠区间去重；平均音量按声能量加权。首次/末次为有耳机音量记录的时间，非物理入耳检测。<br>洞察页的人格判定与音量分级口径：夜间 22:00–06:00、平均每次 ≥40 分钟记「长」、有记录天数占跨度 ≥70% 记「天天」、平均音量 ≥70 dB 记「响」。</div>
    </section>
 
-   <!-- PAGE 3 · 设备 -->
+   <!-- PAGE 3 · 洞察 -->
    <section class="hp-page" id="page2">
+    <div class="phead"><div class="ptitle">洞察</div><div class="psub" id="insScope">个人画像 · 全历史</div></div>
+
+    <div class="card personacard">
+     <div class="pstop"><span class="pstitle">聆听人格</span><span class="pscode" id="psCode">—</span></div>
+     <div class="psname" id="psName">—</div>
+     <div class="psmock" id="psMock">—</div>
+     <div class="ptraits" id="psTraits"></div>
+     <div class="psnote" id="psNote"></div>
+    </div>
+
+    <div class="sectitle">音量健康</div>
+    <div class="card volcard">
+     <div class="voltop">
+      <div class="vleft"><div class="lb">平均播放音量</div><div class="v" id="volAvg">—</div></div>
+      <span class="vtag" id="volTag">—</span>
+     </div>
+     <div class="loudrow">
+      <div class="loudbar"><i id="loudFill"></i></div>
+      <div class="loudpct" id="volLoud">—</div>
+     </div>
+     <div class="volft" id="volFoot">—</div>
+    </div>
+
+    <div class="sectitle">聆听时段</div>
+    <div class="card clockcard">
+     <div class="clockwrap"><div class="clock" id="clock" aria-hidden="true"></div></div>
+     <div class="clocktip" id="clockTip">—</div>
+     <div class="slots" id="slots"></div>
+    </div>
+
+    <div class="sectitle">星期分布</div>
+    <div class="card weekcard">
+     <div class="weekrow" id="weekRow"></div>
+     <div class="weektip" id="weekTip">—</div>
+    </div>
+
+    <div class="sectitle">聆听日历</div>
+    <div class="card calcard">
+     <div class="calhead" id="calHead"></div>
+     <div class="cal" id="cal"></div>
+     <div class="callegend"><span>少</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>多</span></div>
+     <div class="calstats" id="calStats"></div>
+    </div>
+
+    <div class="sectitle">换算一下</div>
+    <div class="grid2">
+     <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></span>连续听</div><div class="v" id="eqDays">—</div><div class="ft">天不摘耳机</div></div>
+     <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg></span>相当于</div><div class="v" id="eqSongs">—</div><div class="ft">首歌（每首 3.5 分）</div></div>
+     <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span>日均（全跨度）</div><div class="v sm" id="eqDaily">—</div><div class="ft" id="eqDailyFt">—</div></div>
+     <div class="m card"><div class="lb"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></span>有记录日均</div><div class="v sm" id="eqRecDay">—</div><div class="ft" id="eqRecDayFt">—</div></div>
+    </div>
+    <div class="foot">人格与分级阈值 · 全程本地计算</div>
+   </section>
+
+   <!-- PAGE 4 · 设备 -->
+   <section class="hp-page" id="page3">
     <div class="phead"><div class="ptitle">设备</div>
      <div class="periodsel"><select id="devPeriod" aria-label="统计周期"><option value="7">近7天</option><option value="30">近30天</option><option value="0">全部</option></select></div>
     </div>
@@ -135,8 +198,8 @@
     <div class="foot" id="devFoot">—</div>
    </section>
 
-   <!-- PAGE 4 · 分享 -->
-   <section class="hp-page" id="page3">
+   <!-- PAGE 5 · 分享 -->
+   <section class="hp-page" id="page4">
     <div class="phead"><div class="ptitle">分享</div><div class="psub">二维码 · 链接</div></div>
     <div class="sh-stack">
      <div class="card sh-card">
@@ -163,30 +226,29 @@
     </div>
    </section>
 
-   <!-- PAGE 5 · 设置 -->
-   <section class="hp-page" id="page4">
-    <div class="phead"><div class="ptitle">设置</div><div class="psub">外观 · 配色 · 关于</div></div>
+  </div>
+ </div>
+
+ <!-- 设置面板：从右上角进入，不占底部导航 -->
+ <div id="settingsSheet" class="sheet" aria-hidden="true">
+  <div class="sheet-head">
+   <button class="iconbtn" id="setBack" title="返回" aria-label="返回"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+   <div class="sheet-title">设置</div>
+   <div class="sheet-spacer"></div>
+  </div>
+  <div class="sheet-body">
     <div class="setgroup">
-     <div class="sethead">外观</div>
-     <div class="setcard card setrow">
-      <div><div class="k">深浅模式</div><div class="s">当前跟随所选，立即生效</div></div>
-      <div class="modese" id="modeSeg">
-       <button data-m="light">浅色</button><button data-m="dark">深色</button><button data-m="auto" class="on">自动</button>
-      </div>
-     </div>
-    </div>
-    <div class="setgroup">
-     <div class="sethead">配色（玻璃底色）</div>
+     <div class="sethead">配色</div>
      <div class="card colorgrid" id="colorGrid" role="radiogroup" aria-label="配色选择"></div>
     </div>
     <div class="setgroup">
      <div class="sethead">数据说明</div>
-     <div class="note card" style="margin-top:0">佩戴次数、最长一次按 5 分钟间隔估算；所有时长按重叠区间去重；平均音量按声能量加权。首次/末次为有耳机音量记录的时间，非物理入耳检测。健康数据全程在本机浏览器解析，不上传、不联网。</div>
+     <div class="note card" style="margin-top:0">佩戴次数、最长一次按 5 分钟间隔估算；所有时长按重叠区间去重；平均音量按声能量加权。首次/末次为有耳机音量记录的时间，非物理入耳检测。洞察页的人格判定与音量分级口径见统计页说明。健康数据全程在本机浏览器解析，不上传、不联网。</div>
     </div>
     <div class="setgroup">
      <div class="sethead">关于</div>
      <div class="aboutcard card">
-      <b>耳机佩戴报告</b> · v4.0.0 — finesse 重制版<br>
+      <b>耳机佩戴报告</b> · v4.6.0 — finesse 重制版<br>
       纯前端、零后端：ZIP 在浏览器内解压分析，数据从不离开你的设备。<br>
       <div class="links">
        <a href="https://github.com/ratehop/headphone-health-report" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
@@ -194,8 +256,7 @@
       </div>
      </div>
     </div>
-   </section>
-
+ 
   </div>
  </div>
 
@@ -203,9 +264,9 @@
   <div class="toolbar-inner">
    <div class="tab on" data-i="0"><span class="nvi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span><span class="tl">今天</span></div>
    <div class="tab" data-i="1"><span class="nvi"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><span class="tl">统计</span></div>
-   <div class="tab" data-i="2"><span class="nvi"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M8 7V5h8v2"/></svg></span><span class="tl">设备</span></div>
-   <div class="tab" data-i="3"><span class="nvi"><svg viewBox="0 0 24 24"><path d="M12 15V3m0 0L8 7m4-4 4 4"/><path d="M5 13v6a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-6"/></svg></span><span class="tl">分享</span></div>
-   <div class="tab" data-i="4"><span class="nvi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7"/></svg></span><span class="tl">设置</span></div>
+   <div class="tab" data-i="2"><span class="nvi"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M18.5 15.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z"/></svg></span><span class="tl">洞察</span></div>
+   <div class="tab" data-i="3"><span class="nvi"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M8 7V5h8v2"/></svg></span><span class="tl">设备</span></div>
+   <div class="tab" data-i="4"><span class="nvi"><svg viewBox="0 0 24 24"><path d="M12 15V3m0 0L8 7m4-4 4 4"/><path d="M5 13v6a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-6"/></svg></span><span class="tl">分享</span></div>
   </div>
  </div>
 </div>
@@ -213,6 +274,6 @@
 <div id="shOk" role="status"></div>
 
 <script src="./assets/jszip.min.js"></script>
-<script src="./app.js?v=4.0.1"></script>
+<script src="./app.js?v=4.6.0"></script>
 </body>
 </html>
